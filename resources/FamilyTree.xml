@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<families xmlns="http://www.it-academy/FamilyTreeSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.it-academy/FamilyTreeSchema FamilyTreeSchema.xsd">
+	<family id="1">
+		<mother>
+			<name>Regina</name>
+			<surname>Johnson</surname>
+			<maiden-name>Stewart</maiden-name>
+			<age>33</age>
+		</mother>
+		<father>
+			<name>David</name>
+			<surname>Johnson</surname>
+			<age>34</age>
+		</father>
+		<children count="2">
+			<child gender="female" date-of-birth="2010-05-14">
+				<name>Angela</name>
+				<surname>Johnson</surname>
+			</child>
+			<child gender="male" date-of-birth="2012-01-23">
+				<name>Fred</name>
+				<surname>Johnson</surname>
+			</child>
+		</children>
+	</family>
+</families>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xl:schema xmlns:xl="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.it-academy/FamilyTreeSchema" xmlns:family="http://www.it-academy/FamilyTreeSchema"
+	elementFormDefault="qualified">
+
+	<xl:element name="families">
+		<xl:complexType>
+			<xl:sequence>
+				<xl:element name="family" minOccurs="0" maxOccurs="unbounded">
+					<xl:complexType>
+						<xl:sequence>
+							<xl:element name="mother">
+								<xl:complexType>
+									<xl:sequence>
+										<xl:element name="name" type="xl:string"></xl:element>
+										<xl:element name="surname" type="xl:string"></xl:element>
+										<xl:element name="maiden-name" type="xl:string"></xl:element>
+										<xl:element name="age">
+											<xl:simpleType>
+												<xl:restriction base="xl:int">
+													<xl:minInclusive value="0" />
+													<xl:maxInclusive value="120" />
+												</xl:restriction>
+											</xl:simpleType>
+										</xl:element>
+									</xl:sequence>
+								</xl:complexType>
+							</xl:element>
+							<xl:element name="father">
+								<xl:complexType>
+									<xl:sequence>
+										<xl:element name="name" type="xl:string"></xl:element>
+										<xl:element name="surname" type="xl:string"></xl:element>
+										<xl:element name="age">
+											<xl:simpleType>
+												<xl:restriction base="xl:int">
+													<xl:minInclusive value="0" />
+													<xl:maxInclusive value="120" />
+												</xl:restriction>
+											</xl:simpleType>
+										</xl:element>
+									</xl:sequence>
+								</xl:complexType>
+							</xl:element>
+							<xl:element name="children">
+								<xl:complexType>
+									<xl:sequence>
+										<xl:element name="child" minOccurs="0" maxOccurs="25">
+											<xl:complexType>
+												<xl:sequence>
+													<xl:element name="name" type="xl:string"></xl:element>
+													<xl:element name="surname" type="xl:string"></xl:element>
+												</xl:sequence>
+												<xl:attribute name="gender" type="xl:string" />
+												<xl:attribute name="date-of-birth" type="xl:string" />
+											</xl:complexType>
+										</xl:element>
+									</xl:sequence>
+									<xl:attribute name="count" type="xl:int" />
+								</xl:complexType>
+							</xl:element>
+						</xl:sequence>
+						<xl:attribute name="id" type="xl:int" />
+					</xl:complexType>
+				</xl:element>
+			</xl:sequence>
+		</xl:complexType>
+	</xl:element>
+</xl:schema>
